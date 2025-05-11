@@ -1,219 +1,245 @@
-/* Variables */
-:root {
-    --primary-color: #3a86ff;
-    --secondary-color: #333;
-    --bg-color: #f9f9f9;
-    --text-color: #222;
-    --light-gray: #eee;
-    --transition: all 0.3s ease;
-}
-
-/* Base Styles */
-* {
+/* Stili Generali */
+body {
+    font-family: 'Arial', sans-serif; /* Un font sans-serif pulito e moderno */
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    background-color: #f4f4f4; /* Un colore di sfondo chiaro e neutro */
+    color: #333; /* Colore del testo principale scuro per un buon contrasto */
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    width: 80%;
+    margin: auto;
+    overflow: hidden; /* Per contenere i float */
+    padding: 0 20px;
 }
 
 /* Header */
 header {
-    padding: 2rem 0;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background: #333; /* Sfondo scuro per l'header */
+    color: #fff; /* Testo bianco nell'header */
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid; /* Un accento di colore blu */
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--secondary-color);
+header .logo {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.logo span {
-    color: var(--primary-color);
+header .logo span {
+    color: #0779e4; /* Accento di colore per parte del logo */
 }
 
-/* Navigation */
-nav ul {
-    display: flex;
+header nav {
+    float: right;
+    margin-top: 5px; /* Allineamento verticale con il logo */
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
-nav ul li {
-    margin-left: 2rem;
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-weight: 500;
-    transition: var(--transition);
-    position: relative;
-    padding: 0.5rem 0;
-}
-
-nav ul li a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: var(--transition);
-}
-
-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
-nav ul li a:hover:after {
-    width: 100%;
+header nav ul li a:hover {
+    color: #0779e4; /* Colore al passaggio del mouse */
+    font-weight: bold;
 }
 
 /* Hero Section */
 .hero {
-    padding: 5rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background: #333 url('path-to-your-hero-image.jpg') no-repeat center center/cover; /* Aggiungi un'immagine di sfondo se vuoi */
+    color: #fff;
+    min-height: 400px;
     text-align: center;
-    min-height: 50vh;
-    background-color: white;
+    display: flex; /* Per centrare verticalmente il contenuto */
+    align-items: center; /* Per centrare verticalmente il contenuto */
+    justify-content: center; /* Per centrare orizzontalmente il contenuto */
+    padding: 20px 0;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--secondary-color);
+    font-size: 55px;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #666;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
-/* Sections */
-section {
-    padding: 5rem 0;
-}
-
-section:nth-child(even) {
-    background-color: white;
-}
-
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: var(--secondary-color);
-    position: relative;
-}
-
-section h2:after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background-color: var(--primary-color);
-}
-
-.content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.content p {
-    margin-bottom: 1.5rem;
-}
-
-.content a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.content a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-/* Buttons */
 .btn {
     display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
+    background: #0779e4; /* Colore primario per i bottoni */
+    color: #fff;
+    padding: 12px 25px;
     text-decoration: none;
-    transition: var(--transition);
-    margin-top: 1rem;
-    border: none;
-    cursor: pointer;
-    font-weight: 500;
+    border-radius: 5px; /* Angoli arrotondati */
+    font-size: 18px;
+    transition: background-color 0.3s ease; /* Transizione per l'hover */
 }
 
 .btn:hover {
-    background-color: #2970e6;
-    transform: translateY(-2px);
+    background: #0056b3; /* Colore più scuro al passaggio del mouse */
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
+/* Sezioni Generali */
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd; /* Separatore leggero tra le sezioni */
+}
+
+section:last-child {
+    border-bottom: none; /* Nessun bordo per l'ultima sezione */
+}
+
+section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* About Section */
+#about .content {
+    text-align: left; /* O center se preferisci */
+    max-width: 800px; /* Limita la larghezza per una migliore leggibilità */
+    margin: 0 auto;
+}
+
+#about .content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Work Section */
+#work .content h3 {
+    margin-top: 30px; /* Spazio sopra ogni progetto */
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+#work .content h3 a {
+    color: #0779e4; /* Colore link per i titoli dei progetti */
+    text-decoration: none;
+}
+
+#work .content h3 a:hover {
+    text-decoration: underline;
+}
+
+#work .content h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555; /* Colore più chiaro per il sottotitolo */
+    font-style: italic;
+}
+
+#work .content p {
+    font-size: 16px;
+    color: #666; /* Colore del testo leggermente più chiaro per la descrizione */
+}
+
+/* Contact Section */
+#contact .content {
+    text-align: center;
+}
+
+#contact .content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#contact .btn {
+    margin-top: 2rem; /* Come definito nel tuo HTML */
+}
+
+#contact .btn.linkedin { /* Stile specifico per il bottone LinkedIn */
+    background-color: #0077B5; /* Colore ufficiale LinkedIn */
+    margin-left: 1rem; /* Come definito nel tuo HTML */
+}
+
+#contact .btn.linkedin:hover {
+    background-color: #005582; /* Colore più scuro per l'hover di LinkedIn */
+}
+
+
+/* Footer (opzionale, se vuoi aggiungerlo) */
+/*
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+*/
+
+/* Responsive Design (Esempio base) */
+@media(max-width: 768px){
+    header .logo,
+    header nav {
+        float: none;
+        text-align: center;
+        width: 100%;
     }
-    
-    .logo {
-        margin-bottom: 1rem;
+
+    header nav ul {
+        margin-top: 10px;
     }
-    
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
     }
-    
-    nav ul li {
-        margin: 0.5rem 0;
-        margin-left: 0;
-    }
-    
+
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    #about .content,
+    #work .content {
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    #contact .btn {
+        display: block; /* Bottoni a tutta larghezza su mobile */
+        margin-bottom: 10px;
+    }
+
+    #contact .btn.linkedin {
+        margin-left: 0; /* Rimuovi il margine sinistro su mobile */
     }
 }
