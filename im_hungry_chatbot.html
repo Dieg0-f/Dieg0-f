@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Hungry Chatbot</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .chat-container {
+            width: 90%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .chat-header {
+            background-color: #FF6B6B;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .chat-header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        
+        .chat-logo {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .chat-logo i {
+            color: #FF6B6B;
+            font-size: 20px;
+        }
+        
+        .chat-messages {
+            padding: 15px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            max-width: 80%;
+        }
+        
+        .user-message {
+            background-color: #E3F2FD;
+            padding: 10px 15px;
+            border-radius: 18px 18px 0 18px;
+            margin-left: auto;
+            color: #333;
+        }
+        
+        .bot-message {
+            background-color: #F8F9FA;
+            padding: 12px 15px;
+            border-radius: 18px 18px 18px 0;
+            border-left: 4px solid #FF6B6B;
+        }
+        
+        .message-time {
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 5px;
+            text-align: right;
+        }
+        
+        .message-content {
+            margin: 0;
+        }
+        
+        .bot-message .message-content {
+            white-space: pre-wrap;
+        }
+        
+        .chat-footer {
+            padding: 15px 20px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        .allergens {
+            font-style: italic;
+            margin-top: 8px;
+            color: #E91E63;
+        }
+
+        .message.user-message-container {
+            display: flex;
+            justify-content: flex-end; /* contenuto dentro div spostato a destra */
+            margin-left: auto;          /* spinge tutto il div verso destra */
+        }
+        
+        @media (max-width: 600px) {
+            .chat-container {
+                width: 95%;
+                border-radius: 0;
+            }
+            
+            .message {
+                max-width: 90%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="chat-logo">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <h1>I'm Hungry</h1>
+        </div>
+        
+        <div class="chat-messages">
+            <div class="message user-message-container">
+                <div class="user-message">
+                    <p class="message-content">Give me the menu at Le PEGE for the lunch</p>
+                    <div class="message-time">13 Jan 2025, 11:30 AM</div>
+                </div>
+            </div>
+            
+            <div class="message bot-message-container">
+                <div class="bot-message">
+                    <p class="message-content">Certainly! Here's the lunch menu for Monday, January 13, 2025, at Le PEGE:
+
+<strong>Daily Specials:</strong>
+1. <strong>Cordon Bleu with Dry-Cured Ham & Comté Cheese</strong> - Served with pan-fried yellow carrots & sweet potato. Choice of homemade spaetzle or fries.
+2. <strong>Turkey Cordon Bleu</strong> - Served with pan-fried yellow carrots & sweet potato. Choice of homemade spaetzle or fries.
+
+<strong>Vegetarian Option:</strong>
+- <strong>Spaetzle Gratin</strong> - Served with braised cabbage & Munster cheese and a mushroom sauce.
+
+<div class="allergens"><strong>Allergens:</strong>
+- Coffee & Pastries: Gluten, Eggs, Lactose
+- Cordon Bleu with Dry-Cured Ham & Comté Cheese: Gluten, Eggs, Lactose
+- Turkey Cordon Bleu: Gluten, Eggs, Lactose
+- Homemade Spaetzle or Fries: Gluten, Eggs, Lactose, Nut
+- Spaetzle Gratin: Lactose
+- Braised Cabbage & Munster Cheese: Lactose
+- Mushroom Sauce: Lactose, Nut</div>
+
+Enjoy your lunch at Le PEGE!</p>
+                    <div class="message-time">13 Jan 2025, 11:30 AM</div>
+                </div>
+            </div>
+            
+            <div class="message user-message-container">
+                <div class="user-message">
+                    <p class="message-content">What can I find at Esplanade for the diner ?</p>
+                    <div class="message-time">13 Jan 2025, 3:45 PM</div>
+                </div>
+            </div>
+            
+            <div class="message bot-message-container">
+                <div class="bot-message">
+                    <p class="message-content">For dinner at Esplanade on Monday, January 13, 2025, you can enjoy the following menu items on the 1st floor:
+
+<strong>Main Courses:</strong>
+- Beef fricadelle with cream sauce
+- Green beans
+- Roasted potatoes
+- Arrabiata pasta gratin
+
+<strong>Desserts:</strong>
+- Paris-Brest
+- Lemon tart
+- Apple compote with speculoos
+
+<div class="allergens"><strong>Allergens Information:</strong>
+- Beef fricadelle contains gluten, eggs, and nuts.
+- Cream sauce contains eggs and lactose.
+- Roasted potatoes contain lactose.
+- Arrabiata pasta gratin contains gluten and lactose.
+- Paris-Brest contains gluten, eggs, lactose, and nuts.
+- Lemon tart contains gluten, eggs, and lactose.
+- Apple compote with speculoos contains lactose.</div>
+
+Please be mindful of the allergens in each dish if you have dietary restrictions.</p>
+                    <div class="message-time">13 Jan 2025, 3:46 PM</div>
+                </div>
+            </div>
+            
+            <div class="message user-message-container">
+                <div class="user-message">
+                    <p class="message-content">What is Arrabiata pasta gratin ?</p>
+                    <div class="message-time">13 Jan 2025, 3:50 PM</div>
+                </div>
+            </div>
+            
+            <div class="message bot-message-container">
+                <div class="bot-message">
+                    <p class="message-content">Arrabiata pasta gratin is a dish that consists of pasta baked with Arrabiata sauce and usually topped with cheese. Arrabiata sauce is a spicy sauce made from tomatoes, garlic, and dried red chili peppers cooked in olive oil. The sauce originates from Italy and is known for its bold, spicy flavor. In a gratin version, the pasta and Arrabiata sauce are typically mixed together, topped with a layer of cheese such as mozzarella or Parmesan, and then baked in the oven until the cheese is golden and bubbly. This dish combines the heat of the Arrabiata with the comforting, creamy texture of the baked cheese topping.</p>
+                    <div class="message-time">13 Jan 2025, 3:51 PM</div>
+                </div>
+            </div>
+            
+            <div class="message user-message-container">
+                <div class="user-message">
+                    <p class="message-content">Give me a dish without milk</p>
+                    <div class="message-time">13 Jan 2025, 3:55 PM</div>
+                </div>
+            </div>
+            
+            <div class="message bot-message-container">
+                <div class="bot-message">
+                    <p class="message-content">For a dish without milk (lactose) from the student menu on the 1st floor at Esplanade for dinner on Monday, January 13, 2025, you can choose the following options:
+
+- Beef fricadelle (Note: contains gluten, eggs, and nuts)
+- Green beans
+- Roasted potatoes (Note: while it contains lactose, you can request it without butter or any milk-based products if possible)
+
+For dessert, the options without milk are limited. It seems all desserts listed contain lactose. You might need to inquire if there is an alternative dessert option available without milk.</p>
+                    <div class="message-time">13 Jan 2025, 3:56 PM</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-footer">
+            The proposed visual appearance offers a more polished representation of the work, without changing its underlying content.
+        </div>
+    </div>
+</body>
+</html>
