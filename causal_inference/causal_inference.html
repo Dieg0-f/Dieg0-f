@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taxi Price Prediction</title>
+    <title>Diff-in-Diff</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="../img/id-badge-solid.svg" type="image/svg+xml">
 
@@ -175,7 +175,7 @@
         }
         
         section {
-            padding: 2rem 0;
+            padding: 5rem 0;
         }
         
         .section-title {
@@ -531,20 +531,11 @@
             
             <div class="header-content">
                 <div class="hero animate">
-                    <h1> - Taxi Price Prediction – </h1>
-                    <p>
-                        In this project, we (in collaboration with 
-                        <a href="https://www.linkedin.com/in/francesca-vasta-602476232/" target="_blank">Francesca Vasta</a>) 
-                        aim to build and evaluate regression models to predict taxi fare prices using a synthetic dataset.
-                        The analysis will focus on feature exploration, preprocessing (handling missing values and outliers), and model training.
+                    <h1> - Door-to-Door Waste Collection: a difference-in-difference analysis – </h1>
+                    <p>Analysis of the impact of door-to-door waste collection on the recycling rate in Northern Italian municipalities using a 
+                            Difference-in-Differences approach based on ISPRA, Legambiente, and local legislative data. The project highlights the policy’s 
+                            effects on both environmental efficiency and civic engagement.
                     </p>
-
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary" onclick="cambiaIframe('data_cleaning.html')">Data Cleaning</a>
-                        <a href="#projects" class="btn btn-primary" onclick="cambiaIframe('linear_models_taxi.html')">Linear Models</a>
-                        <a href="#projects" class="btn btn-primary" onclick="cambiaIframe('decision_tree_taxi.html')">Decision trees</a>
-                        <a href="#projects" class="btn btn-primary" onclick="cambiaIframe('svm_taxi.html')">SVM</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -553,18 +544,10 @@
     <section style="display: grid; place-items: center; height: 100vh; background-color: #f1f5f9;">
 
     <div style="margin-bottom: 20px;"></div>
-    <iframe id="mioIframe" src="data_cleaning.html" width="1200" height="800" style="border:1px solid #6366f1;">
+    <iframe id="mioIframe" src="causal_code.html" width="1200" height="800" style="border:1px solid #6366f1;">
         Your browser donesn't support iframe.
     </iframe>
     <div style="margin-bottom: 20px;"></div>
     </section>
-
-
-    <script>
-        function cambiaIframe(nuovoSrc) {
-            document.getElementById('mioIframe').src = nuovoSrc;
-        }
-    </script>
-
 </body>
 </html>

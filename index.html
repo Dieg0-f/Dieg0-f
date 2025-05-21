@@ -559,9 +559,18 @@
                 
                 <div class="about-text">
                     <h3>Data Scientist & Analyst</h3>
-                    <p>Hello, I'm [Your Name], a passionate Data Scientist with a background in [your education/experience]. I specialize in analyzing complex data and developing predictive models that help companies make data-driven strategic decisions.</p>
-                    <p>My mission is to transform raw data into meaningful and accessible information, creating solutions that have a real impact on business and society.</p>
-                    <p>When I'm not immersed in data, I enjoy [hobbies/interests].</p>
+                    <p>Hello, I'm Diego Fracassi. I specialize in analyzing complex datasets and building predictive models that support data-driven decisions.</p>
+                    <p>My goal is to turn raw data into clear, actionable insights—creating solutions that are both technically solid and genuinely useful.</p>
+                    <p>Outside of work, I enjoy reading about science and technology, exploring the world of video games, and developing small game prototypes for fun and learning.</p>
+                    <hr>
+
+                    <p><strong>Education</strong></p>
+                    <ul>
+                    <li>Sept. 2023 – (Dec. 2025) | Università di Brescia & Université de Strasbourg (Erasmus+ / Double Degree)<br>
+                    <em>Master’s Degree in Analytics and Data Science for Economics and Management</em></li>
+                    <li>Sept. 2019 – Apr. 2023 | Università di Brescia<br>
+                    <em>Bachelor’s Degree in Digital Economics and Business</em></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -652,9 +661,50 @@
             </div>
         </div>
     </section>
+    
+    <section id="thesis">
+        <div class="container">
+            <div class="section-title">
+                <h2>Master’s Thesis – Ongoing Work</h2>
+            </div>
+            
+            <div class="project-horizontal" style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+                
+                <!-- Testo a sinistra -->
+                <div class="project-content" style="flex: 1; min-width: 300px;">
+                    <h3>NBA shooting prediction</h3>
+                    <p>
+                        In this master’s thesis in Data Science / Data Analysis, I am analyzing shooting actions data from the most recent NBA season, aiming to identify the key factors that influence shot success. The analysis focuses on both quantitative aspects, such as player positioning and shot conditions, and temporal and contextual elements.
+                    </p>
+                    <p>    
+                        To obtain accurate and detailed information, a crucial part of the data collection is performed through advanced computer vision techniques, using YOLOv8 to detect players on the court and precisely determine their positions during each shooting action. Additionally, by extracting video data synchronized with timestamps, I can accurately map game sequences.
+                    </p>
+                    <p>
+                        This combination of statistical analysis, machine learning, and computer vision enables me to build predictive models and decision-support tools to optimize shooting strategies, thereby improving on-court performance and providing valuable insights for coaches and players alike.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Computer Vision</span>
+                        <span class="project-tag">YOLOv8</span>
+                        <span class="project-tag">PyTorch</span>
+                        <span class="project-tag">OCR</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Dieg0-f/NBA" class="project-link"><i class="fab fa-github"></i>GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Immagine a destra e centrata verticalmente -->
+                <div class="about-image" style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+                    <img src="img/nba1.png" alt="NBA Shooting Analysis" style="max-width: 100%; height: auto; border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" style="background-color: #f1f5f9;">
         <div class="container">
             <div class="section-title">
                 <h2>My Projects</h2>
@@ -667,7 +717,7 @@
                         <img src="img/im_hungry.png" alt="Progetto 1">
                     </div>
                     <div class="project-content">
-                        <h3>AI'm hungry chatbot</h3>
+                        <h3>Advanced Programming Project</h3>
                         <p>
                             AI’m Hungry is a multilingual AI-powered chatbot that helps University of 
                             Strasbourg students access daily Crous restaurant menus with allergen alerts 
@@ -675,12 +725,14 @@
                         </p>
                         <div class="project-tags">
                             <span class="project-tag">Python</span>
+                            <span class="project-tag">langchain</span>
+                            <span class="project-tag">torch</span>
                             <span class="project-tag">LLM</span>
                             <span class="project-tag">RAG</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/abusche/Restaurant-application" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="im_hungry_chatbot.html" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="https://github.com/abusche/Restaurant-application" class="project-link"><i class="fab fa-github"></i>GitHub</a>
+                            <a href="im_hungry/im_hungry.html" class="project-link"><i class="fas fa-external-link-alt"></i>Demo</a>
                         </div>
                     </div>
                 </div>
@@ -688,19 +740,22 @@
                 <!-- Project 2 -->
                 <div class="project-card animate">
                     <div class="project-img">
-                        <img src="/api/placeholder/400/200" alt="Progetto 2">
+                        <img src="img/taxi.png" alt="Progetto 2">
                     </div>
                     <div class="project-content">
-                        <h3>Segmentazione Clienti</h3>
-                        <p>Analisi cluster per identificare segmenti di clienti e personalizzare strategie di marketing.</p>
+                        <h3>Machine Learning Project</h3>
+                        <p>In this project, we aim to build and evaluate regression models to predict taxi fare prices using a synthetic dataset.
+                            The analysis will focus on feature exploration, preprocessing (handling missing values and outliers), and model training</p>
                         <div class="project-tags">
-                            <span class="project-tag">K-means</span>
+                            <span class="project-tag">Python</span>
                             <span class="project-tag">Pandas</span>
-                            <span class="project-tag">Matplotlib</span>
+                            <span class="project-tag">scikit-learn</span>
+                            <span class="project-tag">Linear Models</span>
+                            <span class="project-tag">Decision Trees</span>
+                            <span class="project-tag">SVM</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="taxi_prediction/taxi_home.html" class="project-link"><i class="fas fa-external-link-alt"></i>Demo</a>
                         </div>
                     </div>
                 </div>
@@ -708,28 +763,34 @@
                 <!-- Project 3 -->
                 <div class="project-card animate">
                     <div class="project-img">
-                        <img src="/api/placeholder/400/200" alt="Progetto 3">
+                        <img src="img/causal.png" alt="Progetto 3">
                     </div>
                     <div class="project-content">
-                        <h3>Dashboard Interattiva</h3>
-                        <p>Dashboard per la visualizzazione e l'analisi di dati aziendali con filtri interattivi.</p>
+                        <h3>Causal Inference Project</h3>
+                        <p>Analysis of the impact of door-to-door waste collection on the recycling rate in Northern Italian municipalities using a 
+                            Difference-in-Differences approach based on ISPRA, Legambiente, and local legislative data. The project highlights the policy’s 
+                            effects on both environmental efficiency and civic engagement.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Dash</span>
-                            <span class="project-tag">Plotly</span>
-                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">R</span>
+                            <span class="project-tag">Time Serie</span>
+                            <span class="project-tag">Diff-in-Diff</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            <a href="causal_inference/causal_inference.html" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <p>More projects coming soon...</p>
                 </div>
             </div>
         </div>
     </section>
+
+    
     
     <!-- Contact Section -->
-    <section id="contact" style="background-color: #f1f5f9;">
+    <section id="contact">
         <div class="container">
             <div class="section-title" style="text-align: center;">
                 <h2>Contact</h2>
@@ -746,7 +807,7 @@
                         <h4 style="margin: 0;">Email</h4>
                     </div>
                     <div class="contact-details" style="margin-top: 1rem;">
-                        <a href="mailto:tuaemail@esempio.com">tuaemail@esempio.com</a>
+                        <a href="mailto:diego99fraca@gmail.com">diego99fraca@gmail.com</a>
                     </div>
                 </div>
 
@@ -759,7 +820,7 @@
                         <h4 style="margin: 0;">LinkedIn</h4>
                     </div>
                     <div class="contact-details" style="margin-top: 1rem;">
-                        <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a>
+                        <a href="https://linkedin.com/in/diego-fracassi-935479303" target="_blank">linkedin.com/in/diego-fracassi-935479303/</a>
                     </div>
                 </div>
 
@@ -772,7 +833,7 @@
                         <h4 style="margin: 0;">GitHub</h4>
                     </div>
                     <div class="contact-details" style="margin-top: 1rem;">
-                        <a href="https://github.com/username" target="_blank">github.com/username</a>
+                        <a href="https://github.com/Dieg0-f" target="_blank">github.com/Dieg0-f</a>
                     </div>
                 </div>
             </div>
